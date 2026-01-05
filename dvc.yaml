@@ -1,0 +1,32 @@
+stages:
+  preprocess:
+    cmd: python -m src.data.preprocess
+    deps:
+      - src/data/preprocess.py
+      - data/raw/Messages.csv
+    outs:
+      - data/preprocessed/cleaned.csv
+
+  features:
+    cmd: python -m src.feature.tfidf
+    deps:
+      - src/feature/tfidf.py
+      - src/config/config.yaml
+      - data/preprocessed/cleaned.csv
+    outs:
+      - artifacts/X_train.pkl
+      - artifacts/X_test.pkl
+      - artifacts/vectorizer/tfidf.pkl
+
+  train:
+    cmd: python -m src.models.train
+    deps:
+      - src/models/train.py
+      - src/config/config.yaml
+      - artifacts/X_train.pkl
+      - artifacts/X_test.pkl
+    outs:
+      - models/best_model.pkl
+      - artifacts/metrics/model_metrics.json
+
+

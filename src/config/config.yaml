@@ -1,18 +1,36 @@
 data:
-  raw: data/raw/emails.csv
-  processed: data/processed/cleaned.csv
+  raw: data/raw/Messages.csv
+  processed: data/preprocessed/cleaned.csv
 
 features:
+  train_features: artifacts/X_train.pkl
+  test_features: artifacts/X_test.pkl
+  vectorizer_path: artifacts/vectorizer/tfidf.pkl
   max_features: 5000
   ngram_range: [1, 2]
 
 training:
+  train_size: 0.8
   test_size: 0.2
   random_state: 42
 
 models:
+  output_dir: models/
+  best_model_path: models/best_model.pkl
+
   candidates:
-    - naive_bayes
-    - logistic_regression
-    
-    
+    naive_bayes:
+      params:
+        alpha: [0.1, 0.5, 1.0]
+
+    svc:
+      params:
+        C: [2.11,2.21,2.25,2.28,2.35,2.4]
+
+    random_forest:
+      params:
+        n_estimators: [100, 200]
+
+metrics:
+  path: artifacts/metrics/model_metrics.json
+
