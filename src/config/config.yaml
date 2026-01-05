@@ -1,0 +1,18 @@
+data:
+  raw: data/raw/emails.csv
+  processed: data/processed/cleaned.csv
+
+features:
+  max_features: 5000
+  ngram_range: [1, 2]
+
+training:
+  test_size: 0.2
+  random_state: 42
+
+models:
+  candidates:
+    - naive_bayes
+    - logistic_regression
+    
+    
