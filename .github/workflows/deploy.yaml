@@ -26,6 +26,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{secrets.DOCKERHUB_USERNAME}}/spam-classif-mlops:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/spam-classif-mlops:latest
 
 
