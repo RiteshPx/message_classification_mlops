@@ -28,5 +28,3 @@ stages:
     outs:
       - models/best_model.pkl
       - artifacts/metrics/model_metrics.json
-
-

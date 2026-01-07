@@ -35,3 +35,94 @@
 2026-01-05 20:53:24,230 | INFO | TRAIN | Selecting best model based on F1 score
 2026-01-05 20:53:24,230 | INFO | TRAIN | Saving best model artifact
 2026-01-05 20:53:24,236 | INFO | TRAIN | Training stage completed successfully
+2026-01-05 21:13:54,520 | INFO | PREPROCESS | Starting preprocessing stage
+2026-01-05 21:13:54,521 | INFO | PREPROCESS | Reading raw data from data/raw/Messages.csv
+2026-01-05 21:13:54,598 | INFO | PREPROCESS | Raw data shape: (5171, 4)
+2026-01-05 21:16:52,279 | INFO | PREPROCESS | Starting preprocessing stage
+2026-01-05 21:16:52,280 | INFO | PREPROCESS | Reading raw data from data/raw/Messages.csv
+2026-01-05 21:16:52,342 | INFO | PREPROCESS | Raw data shape: (5171, 4)
+2026-01-05 21:18:56,809 | INFO | PREPROCESS | Starting preprocessing stage
+2026-01-05 21:18:56,809 | INFO | PREPROCESS | Reading raw data from data/raw/Messages.csv
+2026-01-06 15:14:45,029 | INFO | TRAIN | Loading training and test features
+2026-01-06 15:14:45,079 | INFO | TRAIN | Starting model training and hyperparameter tuning
+2026-01-06 15:14:45,080 | INFO | TRAIN | Training Naive Bayes
+2026-01-06 15:14:45,080 | INFO | TRAIN | Training Naive Bayes with alpha=0.1
+2026-01-06 15:14:45,095 | INFO | TRAIN | Metrics: {'accuracy': 0.9507246376811594, 'f1': 0.9168026101141925}
+2026-01-06 15:14:45,095 | INFO | TRAIN | Training Naive Bayes with alpha=0.5
+2026-01-06 15:14:45,109 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9087947882736156}
+2026-01-06 15:14:45,110 | INFO | TRAIN | Training Naive Bayes with alpha=1.0
+2026-01-06 15:14:45,119 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9081967213114754}
+2026-01-06 15:14:45,120 | INFO | TRAIN | Training SVM
+2026-01-06 15:14:45,120 | INFO | TRAIN | Training Logistic Regression with C=2.11
+2026-01-06 15:14:50,097 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:14:50,097 | INFO | TRAIN | Training Logistic Regression with C=2.21
+2026-01-06 15:14:55,288 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:14:55,289 | INFO | TRAIN | Training Logistic Regression with C=2.25
+2026-01-06 15:15:00,626 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:15:00,626 | INFO | TRAIN | Training Logistic Regression with C=2.28
+2026-01-06 15:15:07,161 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:15:07,161 | INFO | TRAIN | Training Logistic Regression with C=2.35
+2026-01-06 15:33:15,563 | INFO | TRAIN | Loading training and test features
+2026-01-06 15:33:15,593 | INFO | TRAIN | Starting model training and hyperparameter tuning
+2026-01-06 15:33:15,594 | INFO | TRAIN | Training Naive Bayes
+2026-01-06 15:33:16,896 | INFO | TRAIN | Training Naive Bayes with alpha=0.1
+2026-01-06 15:33:16,913 | INFO | TRAIN | Metrics: {'accuracy': 0.9507246376811594, 'f1': 0.9168026101141925}
+2026-01-06 15:33:24,826 | INFO | TRAIN | Training Naive Bayes with alpha=0.5
+2026-01-06 15:33:24,837 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9087947882736156}
+2026-01-06 15:33:28,318 | INFO | TRAIN | Training Naive Bayes with alpha=1.0
+2026-01-06 15:33:28,326 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9081967213114754}
+2026-01-06 15:33:31,747 | INFO | TRAIN | Training SVM
+2026-01-06 15:33:31,790 | INFO | TRAIN | Training Logistic Regression with C=2.11
+2026-01-06 15:33:41,028 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:33:41,171 | INFO | TRAIN | Training Logistic Regression with C=2.21
+2026-01-06 15:33:51,131 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:33:51,204 | INFO | TRAIN | Training Logistic Regression with C=2.25
+2026-01-06 15:34:03,378 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:34:03,436 | INFO | TRAIN | Training Logistic Regression with C=2.28
+2026-01-06 15:34:15,881 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:34:16,003 | INFO | TRAIN | Training Logistic Regression with C=2.35
+2026-01-06 15:34:27,909 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:34:27,967 | INFO | TRAIN | Training Logistic Regression with C=2.4
+2026-01-06 15:34:40,618 | INFO | TRAIN | Metrics: {'accuracy': 0.9874396135265701, 'f1': 0.9778534923339012}
+2026-01-06 15:34:40,634 | INFO | TRAIN | Training Random Forest
+2026-01-06 15:34:40,662 | INFO | TRAIN | Training Random Forest with n_estimators=100
+2026-01-06 15:34:49,142 | INFO | TRAIN | Metrics: {'accuracy': 0.9806763285024155, 'f1': 0.9661016949152542}
+2026-01-06 15:34:49,180 | INFO | TRAIN | Training Random Forest with n_estimators=200
+2026-01-06 15:35:02,121 | INFO | TRAIN | Metrics: {'accuracy': 0.9797101449275363, 'f1': 0.9644670050761421}
+2026-01-06 15:35:02,134 | INFO | TRAIN | Selecting best model based on F1 score
+2026-01-06 15:35:02,134 | INFO | TRAIN | Saving best model artifact
+2026-01-06 15:35:02,144 | INFO | TRAIN | Training stage completed successfully
+2026-01-06 15:51:23,139 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 15:51:25,502 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:07:59,864 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:08:02,671 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:09:48,765 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:09:57,794 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:09:59,553 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:10:03,099 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:11:36,576 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:11:41,384 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:11:55,926 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:11:57,352 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:13:57,064 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:14:02,194 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:14:17,902 | WARNING | FLASK | Invalid input received
+2026-01-06 16:14:41,728 | INFO | FLASK | Received prediction request
+2026-01-06 16:14:41,756 | ERROR | FLASK | Prediction failed: This 'SVC' has no attribute 'predict_proba'
+2026-01-06 16:15:01,214 | INFO | FLASK | Received prediction request
+2026-01-06 16:15:01,215 | ERROR | FLASK | Prediction failed: 'list' object has no attribute 'lower'
+2026-01-06 16:15:10,357 | ERROR | FLASK | Prediction failed: 400 Bad Request: Failed to decode JSON object: Expecting property name enclosed in double quotes: line 2 column 5 (char 7)
+2026-01-06 16:15:46,184 | INFO | FLASK | Received prediction request
+2026-01-06 16:15:46,185 | ERROR | FLASK | Prediction failed: 'list' object has no attribute 'lower'
+2026-01-06 16:16:11,807 | INFO | FLASK | Received prediction request
+2026-01-06 16:16:11,815 | ERROR | FLASK | Prediction failed: This 'SVC' has no attribute 'predict_proba'
+2026-01-06 16:16:19,946 | ERROR | FLASK | Prediction failed: 400 Bad Request: Failed to decode JSON object: Expecting property name enclosed in double quotes: line 2 column 5 (char 7)
+2026-01-06 16:17:06,318 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:17:08,318 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:17:13,524 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:17:16,122 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:17:17,228 | ERROR | FLASK | Prediction failed: 400 Bad Request: Failed to decode JSON object: Expecting property name enclosed in double quotes: line 2 column 5 (char 7)
+2026-01-06 16:17:24,052 | INFO | FLASK | Received prediction request
+2026-01-06 16:17:41,095 | INFO | FLASK | Loading model and vectorizer
+2026-01-06 16:17:42,589 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-06 16:17:49,657 | INFO | FLASK | Received prediction request

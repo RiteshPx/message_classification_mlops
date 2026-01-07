@@ -12,3 +12,5 @@ mlruns/
 
 venv310/
 .venv310
+dvc_storage
+mlruns/

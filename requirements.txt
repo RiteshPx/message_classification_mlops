@@ -5,9 +5,10 @@ jinja2==3.1.2
 matplotlib
 seaborn==0.12.2
 fastapi
-nltk
+# nltk
 numpy
 pandas
 scikit-learn
--e ./src
 joblib
+PyYAML
+mlflow
