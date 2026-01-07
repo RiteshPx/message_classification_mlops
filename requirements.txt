@@ -12,3 +12,4 @@ scikit-learn
 joblib
 PyYAML
 mlflow
+dvc[s3]
