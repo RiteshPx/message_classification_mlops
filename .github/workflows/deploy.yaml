@@ -35,8 +35,8 @@ jobs:
 
       - name: Pull DVC Artifacts
         run: |
-          dvc pull -o models/model.pkl
-          dvc pull -o artifacts/vectorizer/tfidf.pkl
+          dvc pull models/model.pkl
+          dvc pull artifacts/vectorizer/tfidf.pkl
 
 
       - name: Build and push Docker image
