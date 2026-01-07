@@ -34,8 +34,9 @@ jobs:
         run: pip install dvc[s3]
 
       - name: Pull DVC Artifacts
-        run: dvc pull -o models/model.pkl
-        run: dvc pull -o artifacts/vectorizer/tfidf.pkl
+        run: |
+          dvc pull -o models/model.pkl
+          dvc pull -o artifacts/vectorizer/tfidf.pkl
 
 
       - name: Build and push Docker image
