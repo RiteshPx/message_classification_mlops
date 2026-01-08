@@ -35,7 +35,7 @@ jobs:
 
       - name: Pull DVC Artifacts
         run: |
-          dvc pull models/model.pkl
+          dvc pull models/best_model.pkl
           dvc pull artifacts/vectorizer/tfidf.pkl
 
 
