@@ -15,20 +15,26 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME}}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      # - name: Log in to Docker Hub
+      #   uses: docker/login-action@v1
+      #   with:
+      #     username: ${{ secrets.DOCKERHUB_USERNAME}}
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Install AWS CLI
         run: pip install awscli
 
-      - name: Configure AWS Credentials
+      - name: Configure AWS Credentials 
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ${{ secrets.AWS_DEFAULT_REGION }}
+      
+      - name: AWS ECR Login
+        run: |
+          aws ecr get-login-password --region ${{ secrets.AWS_DEFAULT_REGION }} \
+          | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com
+
 
       - name: Install DVC
         run: pip install dvc[s3]
@@ -38,12 +44,32 @@ jobs:
           dvc pull models/best_model.pkl
           dvc pull artifacts/vectorizer/tfidf.pkl
 
+      
+      # - name: Build  Docker image
+      #   uses: docker build -t spam-classifier-api .
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: ${{ secrets.DOCKERHUB_USERNAME }}/spam-classif-mlops:latest
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+      - name: Build Docker Image
+        run: docker build -t spam-classifier-api .
+
+      - name: Tag Image
+        run: docker tag spam-classifier-api:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/spam_classifier_api:latest
+
+      - name: Push to ECR
+        run: docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/spam-classifier-api:latest
+
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v0.1.10
         with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/spam-classif-mlops:latest
-
-
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/spam-classifier-api:latest
+            docker stop spam-classifier-api || true
+            docker rm spam-classifier-api || true
+            docker run -d -p 7000:7000 --name spam-api ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/spam-classifier-api:latest
