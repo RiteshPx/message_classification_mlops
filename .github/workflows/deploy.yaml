@@ -36,13 +36,13 @@ jobs:
           | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com
 
 
-      # - name: Install DVC
-      #   run: pip install dvc[s3]
+      - name: Install DVC
+        run: pip install dvc[s3]
 
-      # - name: Pull DVC Artifacts
-      #   run: |
-      #     dvc pull models/best_model.pkl
-      #     dvc pull artifacts/vectorizer/tfidf.pkl
+      - name: Pull DVC Artifacts
+        run: |
+          dvc pull models/best_model.pkl
+          dvc pull artifacts/vectorizer/tfidf.pkl
 
       
       # - name: Build  Docker image
