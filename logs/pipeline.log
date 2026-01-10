@@ -126,3 +126,165 @@
 2026-01-06 16:17:41,095 | INFO | FLASK | Loading model and vectorizer
 2026-01-06 16:17:42,589 | INFO | FLASK | Model and vectorizer loaded successfully
 2026-01-06 16:17:49,657 | INFO | FLASK | Received prediction request
+2026-01-09 23:04:13,861 | INFO | PREPROCESS | Starting preprocessing stage
+2026-01-09 23:04:13,861 | INFO | PREPROCESS | Reading raw data from data/raw/Messages.csv
+2026-01-09 23:04:14,002 | INFO | PREPROCESS | Raw data shape: (5171, 4)
+2026-01-09 23:04:14,656 | INFO | PREPROCESS | Saved cleaned data to data/preprocessed/cleaned.csv
+2026-01-09 23:04:28,257 | INFO | FEATURES | Loading processed dataset
+2026-01-09 23:04:28,258 | INFO | FEATURES | Splitting data into train/test
+2026-01-09 23:04:28,263 | INFO | FEATURES | Fitting TF-IDF on training data only
+2026-01-09 23:04:28,264 | INFO | FEATURES | Transforming test data
+2026-01-09 23:04:30,186 | INFO | FEATURES | Saving vectorizer and feature artifacts
+2026-01-09 23:04:37,499 | INFO | TRAIN | Loading training and test features
+2026-01-09 23:04:37,571 | INFO | TRAIN | Starting model training and hyperparameter tuning
+2026-01-09 23:04:37,571 | INFO | TRAIN | Training Naive Bayes
+2026-01-09 23:04:39,570 | INFO | TRAIN | Training Naive Bayes with alpha=0.1
+2026-01-09 23:04:39,589 | INFO | TRAIN | Metrics: {'accuracy': 0.9487922705314009, 'f1': 0.9126853377265239}
+2026-01-09 23:04:52,744 | INFO | TRAIN | Training Naive Bayes with alpha=0.5
+2026-01-09 23:04:52,753 | INFO | TRAIN | Metrics: {'accuracy': 0.9449275362318841, 'f1': 0.9067103109656302}
+2026-01-09 23:04:58,845 | INFO | TRAIN | Training Naive Bayes with alpha=1.0
+2026-01-09 23:04:58,857 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9078947368421053}
+2026-01-09 23:05:04,970 | INFO | TRAIN | Training SVM
+2026-01-09 23:05:05,107 | INFO | TRAIN | Training Logistic Regression with C=2.11
+2026-01-09 23:05:14,506 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:05:14,631 | INFO | TRAIN | Training Logistic Regression with C=2.21
+2026-01-09 23:05:24,573 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:05:24,730 | INFO | TRAIN | Training Logistic Regression with C=2.25
+2026-01-09 23:05:34,886 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:05:35,077 | INFO | TRAIN | Training Logistic Regression with C=2.28
+2026-01-09 23:05:46,843 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:05:46,955 | INFO | TRAIN | Training Logistic Regression with C=2.35
+2026-01-09 23:06:12,654 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:06:12,939 | INFO | TRAIN | Training Logistic Regression with C=2.4
+2026-01-09 23:06:31,779 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:06:31,785 | INFO | TRAIN | Training Random Forest
+2026-01-09 23:06:31,914 | INFO | TRAIN | Training Random Forest with n_estimators=100
+2026-01-09 23:06:39,593 | INFO | TRAIN | Metrics: {'accuracy': 0.9758454106280193, 'f1': 0.9581239530988275}
+2026-01-09 23:06:39,696 | INFO | TRAIN | Training Random Forest with n_estimators=200
+2026-01-09 23:06:50,144 | INFO | TRAIN | Metrics: {'accuracy': 0.9758454106280193, 'f1': 0.9582637729549248}
+2026-01-09 23:06:50,149 | INFO | TRAIN | Selecting best model based on F1 score
+2026-01-09 23:06:50,150 | INFO | TRAIN | Saving best model artifact
+2026-01-09 23:06:50,164 | INFO | TRAIN | Training stage completed successfully
+2026-01-09 23:12:54,161 | INFO | TRAIN | Loading training and test features
+2026-01-09 23:12:54,189 | INFO | TRAIN | Starting model training and hyperparameter tuning
+2026-01-09 23:12:54,189 | INFO | TRAIN | Training Naive Bayes
+2026-01-09 23:12:55,733 | INFO | TRAIN | Training Naive Bayes with alpha=0.1
+2026-01-09 23:12:55,754 | INFO | TRAIN | Metrics: {'accuracy': 0.9487922705314009, 'f1': 0.9126853377265239}
+2026-01-09 23:13:04,115 | INFO | TRAIN | Training Naive Bayes with alpha=0.5
+2026-01-09 23:13:04,122 | INFO | TRAIN | Metrics: {'accuracy': 0.9449275362318841, 'f1': 0.9067103109656302}
+2026-01-09 23:13:09,205 | INFO | TRAIN | Training Naive Bayes with alpha=1.0
+2026-01-09 23:13:09,222 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9078947368421053}
+2026-01-09 23:13:14,629 | INFO | TRAIN | Training SVM
+2026-01-09 23:13:14,767 | INFO | TRAIN | Training Logistic Regression with C=2.11
+2026-01-09 23:13:23,975 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:13:24,097 | INFO | TRAIN | Training Logistic Regression with C=2.21
+2026-01-09 23:13:50,395 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:13:51,052 | INFO | TRAIN | Training Logistic Regression with C=2.25
+2026-01-09 23:14:03,751 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:14:03,845 | INFO | TRAIN | Training Logistic Regression with C=2.28
+2026-01-09 23:14:22,210 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:14:22,444 | INFO | TRAIN | Training Logistic Regression with C=2.35
+2026-01-09 23:14:46,416 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:14:46,694 | INFO | TRAIN | Training Logistic Regression with C=2.4
+2026-01-09 23:15:14,512 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-09 23:15:14,527 | INFO | TRAIN | Training Random Forest
+2026-01-09 23:15:14,789 | INFO | TRAIN | Training Random Forest with n_estimators=100
+2026-01-09 23:15:35,507 | INFO | TRAIN | Metrics: {'accuracy': 0.9816425120772947, 'f1': 0.9682804674457429}
+2026-01-09 23:15:35,764 | INFO | TRAIN | Training Random Forest with n_estimators=200
+2026-01-09 23:15:51,453 | INFO | TRAIN | Metrics: {'accuracy': 0.9748792270531401, 'f1': 0.9566666666666667}
+2026-01-09 23:15:51,460 | INFO | TRAIN | Selecting best model based on F1 score
+2026-01-09 23:15:51,460 | INFO | TRAIN | Saving best model artifact
+2026-01-09 23:15:51,503 | INFO | TRAIN | Training stage completed successfully
+2026-01-10 15:52:36,449 | INFO | TRAIN | Loading training and test features
+2026-01-10 15:52:36,491 | INFO | TRAIN | Starting model training and hyperparameter tuning
+2026-01-10 15:52:36,492 | INFO | TRAIN | Training Naive Bayes
+2026-01-10 15:52:37,713 | INFO | TRAIN | Training Naive Bayes with alpha=0.1
+2026-01-10 15:52:37,736 | INFO | TRAIN | Metrics: {'accuracy': 0.9487922705314009, 'f1': 0.9126853377265239}
+2026-01-10 15:52:49,084 | INFO | TRAIN | Training Naive Bayes with alpha=0.5
+2026-01-10 15:52:49,091 | INFO | TRAIN | Metrics: {'accuracy': 0.9449275362318841, 'f1': 0.9067103109656302}
+2026-01-10 15:52:53,639 | INFO | TRAIN | Training Naive Bayes with alpha=1.0
+2026-01-10 15:52:53,648 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9078947368421053}
+2026-01-10 15:52:59,489 | INFO | TRAIN | Training SVM
+2026-01-10 15:52:59,733 | INFO | TRAIN | Training Logistic Regression with C=2.11
+2026-01-10 15:53:24,138 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 15:53:24,214 | INFO | TRAIN | Training Logistic Regression with C=2.21
+2026-01-10 15:53:47,173 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 15:53:47,273 | INFO | TRAIN | Training Logistic Regression with C=2.25
+2026-01-10 15:54:11,445 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 15:54:11,529 | INFO | TRAIN | Training Logistic Regression with C=2.28
+2026-01-10 15:54:33,852 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 15:54:33,938 | INFO | TRAIN | Training Logistic Regression with C=2.35
+2026-01-10 15:54:50,696 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 15:54:50,767 | INFO | TRAIN | Training Logistic Regression with C=2.4
+2026-01-10 15:55:07,054 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 15:55:07,058 | INFO | TRAIN | Training Random Forest
+2026-01-10 15:55:07,128 | INFO | TRAIN | Training Random Forest with n_estimators=100
+2026-01-10 15:55:13,823 | INFO | TRAIN | Metrics: {'accuracy': 0.9768115942028985, 'f1': 0.959866220735786}
+2026-01-10 15:55:13,914 | INFO | TRAIN | Training Random Forest with n_estimators=200
+2026-01-10 15:55:23,303 | INFO | TRAIN | Metrics: {'accuracy': 0.9758454106280193, 'f1': 0.9585406301824212}
+2026-01-10 15:55:23,307 | INFO | TRAIN | Selecting best model based on F1 score
+2026-01-10 15:55:23,307 | INFO | TRAIN | Saving best model artifact
+2026-01-10 15:55:23,313 | INFO | TRAIN | Training stage completed successfully
+2026-01-10 15:59:47,365 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 15:59:48,881 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:01:23,280 | WARNING | FLASK | Invalid input received
+2026-01-10 16:01:42,723 | WARNING | FLASK | Invalid input received
+2026-01-10 16:01:48,788 | WARNING | FLASK | Invalid input received
+2026-01-10 16:02:18,826 | WARNING | FLASK | Invalid input received
+2026-01-10 16:05:21,630 | WARNING | FLASK | Invalid input received
+2026-01-10 16:05:53,761 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:05:57,272 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:06:06,829 | WARNING | FLASK | Invalid input received
+2026-01-10 16:07:31,725 | WARNING | FLASK | Invalid input received
+2026-01-10 16:10:26,413 | WARNING | FLASK | Invalid input received
+2026-01-10 16:10:51,378 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:10:53,044 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:11:00,579 | WARNING | FLASK | Invalid input received
+2026-01-10 16:11:52,628 | WARNING | FLASK | Invalid input received
+2026-01-10 16:12:12,059 | WARNING | FLASK | Invalid input received
+2026-01-10 16:13:01,341 | WARNING | FLASK | Invalid input received
+2026-01-10 16:13:43,758 | WARNING | FLASK | Invalid input received
+2026-01-10 16:14:08,745 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:14:10,388 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:14:18,087 | INFO | FLASK | Input data: tam
+2026-01-10 16:14:18,091 | INFO | FLASK | Input data1: None
+2026-01-10 16:14:18,092 | WARNING | FLASK | Invalid input received
+2026-01-10 16:16:06,848 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:16:09,112 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:16:16,009 | INFO | FLASK | Input data: hi ram
+2026-01-10 16:16:16,011 | INFO | FLASK | Received prediction request
+2026-01-10 16:21:45,834 | INFO | FLASK | Input data: hi baby
+
+2026-01-10 16:21:45,836 | INFO | FLASK | Received prediction request
+2026-01-10 16:21:59,763 | INFO | FLASK | Input data: hii ramm
+2026-01-10 16:21:59,764 | INFO | FLASK | Received prediction request
+2026-01-10 16:23:08,769 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:23:10,013 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:23:20,414 | INFO | FLASK | Received prediction request
+2026-01-10 16:24:33,737 | INFO | FLASK | Received prediction request
+2026-01-10 16:24:44,413 | INFO | FLASK | Received prediction request
+2026-01-10 16:24:59,144 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:25:01,249 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:25:04,561 | INFO | FLASK | Received prediction request
+2026-01-10 16:25:04,564 | ERROR | FLASK | Prediction failed: 'list' object has no attribute 'lower'
+2026-01-10 16:25:13,924 | INFO | FLASK | Received prediction request
+2026-01-10 16:25:13,931 | ERROR | FLASK | Prediction failed: 'list' object has no attribute 'lower'
+2026-01-10 16:25:29,922 | INFO | FLASK | Received prediction request
+2026-01-10 16:25:29,926 | ERROR | FLASK | Prediction failed: 'list' object has no attribute 'lower'
+2026-01-10 16:28:47,136 | INFO | FLASK | Received prediction request
+2026-01-10 16:28:47,139 | ERROR | FLASK | Prediction failed: 'list' object has no attribute 'lower'
+2026-01-10 16:28:59,608 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:29:02,438 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:29:10,172 | INFO | FLASK | Received prediction request
+2026-01-10 16:29:21,793 | INFO | FLASK | Received prediction request
+2026-01-10 16:30:50,764 | INFO | FLASK | Received prediction request
+2026-01-10 16:30:58,321 | INFO | FLASK | Received prediction request
+2026-01-10 16:31:09,965 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:31:12,201 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:31:19,574 | INFO | FLASK | Received prediction request
+2026-01-10 16:32:12,132 | INFO | FLASK | Received prediction request
+2026-01-10 16:32:15,671 | INFO | FLASK | Received prediction request
+2026-01-10 16:32:22,936 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 16:32:25,239 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 16:32:31,482 | INFO | FLASK | Received prediction request
+2026-01-10 16:34:12,867 | INFO | FLASK | Received prediction request

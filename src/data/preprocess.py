@@ -21,6 +21,7 @@ def preprocess_data(input_path, output_path):
 
     df["Label"] = df["Label"].map({"ham": 0, "spam": 1})
     df=df[["Label","Text"]]
+    # df["Text"] = df["Label
 
     df.to_csv(output_path, index=False)
     logger.info(f"Saved cleaned data to {output_path}")

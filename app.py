@@ -1,7 +1,7 @@
 import yaml
 import joblib
 import numpy as np
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 
 from src.utils.logger import setup_logger
 
@@ -33,9 +33,13 @@ logger.info("Model and vectorizer loaded successfully")
 # --------------------------------------------------
 # Health check
 # --------------------------------------------------
-@app.route("/", methods=["GET"])
+@app.route("/health", methods=["GET"])
 def health():
     return jsonify({"status": "ok"}), 200
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 # --------------------------------------------------
 # Prediction endpoint
@@ -43,14 +47,16 @@ def health():
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
-        data = request.get_json()
+        # data1 = request.get_json()  # use in case of JSON input
+        data = request.form.get("text")
+        # logger.info(f"Input data: {data}")
 
-        if not data or "text" not in data:
+        if not data :
             logger.warning("Invalid input received")
             return jsonify({"error": "Missing 'text' field"}), 400
 
-        text = data["text"]
-
+        # text = data["text"]
+        text = data
         logger.info("Received prediction request")
 
         # Vectorize input
@@ -58,14 +64,18 @@ def predict():
 
         # Predict
         prediction = model.predict(X)[0]
-        # probability = model.predict_proba(X)[0].max()
+        probability = model.predict_proba(X)[0].max()
 
-        label = "spam" if prediction == 1 else "ham"
+        label = "Spam" if prediction == 1 else "Ham"
 
-        return jsonify({
-            "prediction": label,
-            # "confidence": round(float(probability), 4)
-        })
+        # return jsonify({
+        #     "prediction": label,
+        #     "confidence": round(float(probability), 4)
+        # })
+        return render_template('result.html', 
+                           prediction=label, 
+                           message=text,
+                           confidence=round(float(probability), 4))
 
     except Exception as e:
         logger.error(f"Prediction failed: {e}")

@@ -9,8 +9,8 @@ stages:
       size: 5502592
     - path: src/data/preprocess.py
       hash: md5
-      md5: c5575778345ce231cc4291c1b1fe7bdc
-      size: 933
+      md5: 555a62684634457a84d29b5b5b654f15
+      size: 963
     outs:
     - path: data/preprocessed/cleaned.csv
       hash: md5
@@ -25,50 +25,50 @@ stages:
       size: 4394247
     - path: src/config/config.yaml
       hash: md5
-      md5: b528be6535637c4d21a05602d906945f
-      size: 699
+      md5: 1c98c78660936b24281a83e251271b47
+      size: 735
     - path: src/feature/tfidf.py
       hash: md5
-      md5: 1a5f7df01bf3f8c7934750b68514762a
-      size: 1533
+      md5: 26f8e83a0e414ecea859a30b828f362e
+      size: 1564
     outs:
     - path: artifacts/X_test.pkl
       hash: md5
-      md5: dd3ac8016d0c03119d44cc4531f3a1ee
-      size: 1166954
+      md5: 9a0b22690a94fb76f8524dfcd9512063
+      size: 684218
     - path: artifacts/X_train.pkl
       hash: md5
-      md5: dda08c5bc24296e4a9e25585b1964064
-      size: 4678402
+      md5: 633d7b5c27913ab74b5dcd47de032784
+      size: 2763746
     - path: artifacts/vectorizer/tfidf.pkl
       hash: md5
-      md5: cc1ecda331de18e2724069311058c962
-      size: 190192
+      md5: 441b41db137d8a32ada3aabb6a106279
+      size: 192702
   train:
     cmd: python -m src.models.train
     deps:
     - path: artifacts/X_test.pkl
       hash: md5
-      md5: dd3ac8016d0c03119d44cc4531f3a1ee
-      size: 1166954
+      md5: 9a0b22690a94fb76f8524dfcd9512063
+      size: 684218
     - path: artifacts/X_train.pkl
       hash: md5
-      md5: dda08c5bc24296e4a9e25585b1964064
-      size: 4678402
+      md5: 633d7b5c27913ab74b5dcd47de032784
+      size: 2763746
     - path: src/config/config.yaml
       hash: md5
-      md5: b528be6535637c4d21a05602d906945f
-      size: 699
+      md5: 1c98c78660936b24281a83e251271b47
+      size: 735
     - path: src/models/train.py
       hash: md5
-      md5: 18bf8d9f0b8fc223a8077c5560444783
-      size: 4508
+      md5: a4289d0459736edc634532c59602a2fc
+      size: 4588
     outs:
     - path: artifacts/metrics/model_metrics.json
       hash: md5
-      md5: d6a72a7c9d8b94e7494d3dc995ecdea5
-      size: 1164
+      md5: bd56aa0c3039c5ce6abe919cd97a7456
+      size: 1163
     - path: models/best_model.pkl
       hash: md5
-      md5: ca233e5ef957869bf6f66ccca909bf67
-      size: 1603915
+      md5: f889e425896b0188c2c99ca21238824f
+      size: 998603

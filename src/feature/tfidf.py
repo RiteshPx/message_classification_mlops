@@ -34,7 +34,8 @@ def build_features():
     logger.info("Transforming test data")
     vectorizer = TfidfVectorizer(
         max_features=config["features"]["max_features"],
-        ngram_range=tuple(config["features"]["ngram_range"])
+        ngram_range=tuple(config["features"]["ngram_range"]),
+        stop_words="english"
     )
 
     X_train = vectorizer.fit_transform(X_train_text)

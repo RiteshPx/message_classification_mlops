@@ -30,6 +30,7 @@ def train_and_evaluate(model, X_train, y_train, X_test, y_test):
 
 def main():
     config = load_config()
+    mlflow.set_tracking_uri(config["mlflow"]["tracking_uri"])
     mlflow.set_experiment("email-spam-classification")
 
     logger.info("Loading training and test features")
@@ -71,7 +72,7 @@ def main():
         with mlflow.start_run(run_name=f"LR_C_{C}"):
             mlflow.log_param("model", "svc")
             mlflow.log_param("C", C)
-            model = SVC(C=C)
+            model = SVC(C=C,probability=True)
             logger.info(f"Training Logistic Regression with C={C}")
             metrics = train_and_evaluate(model, X_train, y_train, X_test, y_test)
             

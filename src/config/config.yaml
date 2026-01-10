@@ -34,3 +34,6 @@ models:
 metrics:
   path: artifacts/metrics/model_metrics.json
 
+mlflow:
+  tracking_uri: mlruns/
+
