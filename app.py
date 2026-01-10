@@ -75,7 +75,7 @@ def predict():
         return render_template('result.html', 
                            prediction=label, 
                            message=text,
-                           confidence=round(float(probability), 4))
+                           confidence=round(float(probability), 2)*100)
 
     except Exception as e:
         logger.error(f"Prediction failed: {e}")

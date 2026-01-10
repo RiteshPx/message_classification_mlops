@@ -15,6 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY src/ src/
 COPY app.py .
+COPY templates/ templates/
+COPY static/ static/
 COPY models/ models/
 COPY artifacts/ artifacts/
 

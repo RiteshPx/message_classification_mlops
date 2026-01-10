@@ -322,3 +322,10 @@
 2026-01-10 18:02:28,053 | INFO | TRAIN | Selecting best model based on F1 score
 2026-01-10 18:02:28,054 | INFO | TRAIN | Saving best model artifact
 2026-01-10 18:02:28,060 | INFO | TRAIN | Training stage completed successfully
+2026-01-10 19:52:17,597 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 19:52:20,527 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 19:52:33,655 | INFO | FLASK | Received prediction request
+2026-01-10 20:19:47,427 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 20:19:50,281 | INFO | FLASK | Model and vectorizer loaded successfully
+2026-01-10 20:20:02,849 | INFO | FLASK | Received prediction request
+2026-01-10 20:20:25,272 | INFO | FLASK | Received prediction request
