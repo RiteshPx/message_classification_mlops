@@ -329,3 +329,5 @@
 2026-01-10 20:19:50,281 | INFO | FLASK | Model and vectorizer loaded successfully
 2026-01-10 20:20:02,849 | INFO | FLASK | Received prediction request
 2026-01-10 20:20:25,272 | INFO | FLASK | Received prediction request
+2026-01-10 20:58:57,152 | INFO | FLASK | Loading model and vectorizer
+2026-01-10 20:59:00,792 | INFO | FLASK | Model and vectorizer loaded successfully
