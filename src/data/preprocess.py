@@ -14,7 +14,11 @@ def clean_text(text):
 def preprocess_data(input_path, output_path):
     logger.info("Starting preprocessing stage")
     logger.info(f"Reading raw data from {input_path}")
-    df = pd.read_csv(input_path)
+    try:
+        df = pd.read_csv(input_path)
+    except FileNotFoundError:
+        logger.error(f"File not found: {input_path}")
+        raise
 
     logger.info(f"Raw data shape: {df.shape}")
     df["Text"] = df["Message"].astype(str).apply(clean_text)

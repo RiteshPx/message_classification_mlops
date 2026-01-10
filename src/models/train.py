@@ -42,6 +42,7 @@ def main():
     best_model = None
 
     os.makedirs(config["models"]["output_dir"], exist_ok=True)
+    
 
     # -------- Naive Bayes --------
 

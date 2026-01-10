@@ -1,7 +1,5 @@
 [core]
     remote = s3remote
-['remote "local"']
-    url = ../dvc_storage
 ['remote "s3remote"']
     url = s3://spam-classifier-mlops-artifacts
     profile = default

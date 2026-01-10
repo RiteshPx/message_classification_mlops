@@ -288,3 +288,37 @@
 2026-01-10 16:32:25,239 | INFO | FLASK | Model and vectorizer loaded successfully
 2026-01-10 16:32:31,482 | INFO | FLASK | Received prediction request
 2026-01-10 16:34:12,867 | INFO | FLASK | Received prediction request
+2026-01-10 17:57:59,087 | INFO | PREPROCESS | Starting preprocessing stage
+2026-01-10 17:57:59,088 | INFO | PREPROCESS | Reading raw data from data/raw/Messages.csv
+2026-01-10 17:57:59,199 | INFO | PREPROCESS | Raw data shape: (5171, 4)
+2026-01-10 17:57:59,732 | INFO | PREPROCESS | Saved cleaned data to data/preprocessed/cleaned.csv
+2026-01-10 17:59:04,153 | INFO | TRAIN | Loading training and test features
+2026-01-10 17:59:04,170 | INFO | TRAIN | Starting model training and hyperparameter tuning
+2026-01-10 17:59:04,171 | INFO | TRAIN | Training Naive Bayes
+2026-01-10 17:59:05,614 | INFO | TRAIN | Training Naive Bayes with alpha=0.1
+2026-01-10 17:59:05,633 | INFO | TRAIN | Metrics: {'accuracy': 0.9487922705314009, 'f1': 0.9126853377265239}
+2026-01-10 17:59:17,414 | INFO | TRAIN | Training Naive Bayes with alpha=0.5
+2026-01-10 17:59:17,442 | INFO | TRAIN | Metrics: {'accuracy': 0.9449275362318841, 'f1': 0.9067103109656302}
+2026-01-10 17:59:28,035 | INFO | TRAIN | Training Naive Bayes with alpha=1.0
+2026-01-10 17:59:28,056 | INFO | TRAIN | Metrics: {'accuracy': 0.9458937198067633, 'f1': 0.9078947368421053}
+2026-01-10 17:59:37,018 | INFO | TRAIN | Training SVM
+2026-01-10 17:59:37,178 | INFO | TRAIN | Training Logistic Regression with C=2.11
+2026-01-10 18:00:00,141 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 18:00:00,229 | INFO | TRAIN | Training Logistic Regression with C=2.21
+2026-01-10 18:00:19,328 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 18:00:19,412 | INFO | TRAIN | Training Logistic Regression with C=2.25
+2026-01-10 18:00:39,540 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 18:00:39,627 | INFO | TRAIN | Training Logistic Regression with C=2.28
+2026-01-10 18:00:58,705 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 18:00:58,783 | INFO | TRAIN | Training Logistic Regression with C=2.35
+2026-01-10 18:01:47,652 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 18:01:47,832 | INFO | TRAIN | Training Logistic Regression with C=2.4
+2026-01-10 18:02:15,483 | INFO | TRAIN | Metrics: {'accuracy': 0.9893719806763285, 'f1': 0.9813242784380306}
+2026-01-10 18:02:15,487 | INFO | TRAIN | Training Random Forest
+2026-01-10 18:02:15,564 | INFO | TRAIN | Training Random Forest with n_estimators=100
+2026-01-10 18:02:21,084 | INFO | TRAIN | Metrics: {'accuracy': 0.9797101449275363, 'f1': 0.964824120603015}
+2026-01-10 18:02:21,159 | INFO | TRAIN | Training Random Forest with n_estimators=200
+2026-01-10 18:02:28,050 | INFO | TRAIN | Metrics: {'accuracy': 0.9729468599033816, 'f1': 0.9534883720930233}
+2026-01-10 18:02:28,053 | INFO | TRAIN | Selecting best model based on F1 score
+2026-01-10 18:02:28,054 | INFO | TRAIN | Saving best model artifact
+2026-01-10 18:02:28,060 | INFO | TRAIN | Training stage completed successfully
