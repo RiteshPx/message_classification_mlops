@@ -12,3 +12,4 @@ joblib
 PyYAML
 mlflow
 dvc[s3]
+gunicorn

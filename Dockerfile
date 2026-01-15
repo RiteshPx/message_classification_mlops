@@ -21,6 +21,6 @@ COPY models/ models/
 COPY artifacts/ artifacts/
 
 EXPOSE 7000
-CMD ["python", "app.py"]
-
+# CMD ["python", "app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:7000", "app:app"]
  
